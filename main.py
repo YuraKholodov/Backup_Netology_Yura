@@ -22,7 +22,7 @@ def upload_photo(id_user, photo_count=5):
     for item in tqdm(best_photo, desc='Сохранение фотографий на Яндекс диске'):
         my_ya_disk.upload_file(name_folder, item)
 
-    # Записываем данные о всех скачанных фоторафиях в файл .json
+    # Записываем данные о всех скаченных фотографиях в файл .json
     with open("photos.json", "w") as file:
         json.dump(best_photo, file, indent=2)
 
